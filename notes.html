@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Homework Buddy - Important Notes</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+#notesContainer {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.note {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+#buttonsContainer {
+    display: flex;
+    gap: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Homework Buddy</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="task-manager.html">Task Manager</a></li>
+                <li><a href="notes.html" id="notesLink">Important Notes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Important Notes Based on Your Subjects</h2>
+        <div id="notesContainer"></div>
+        <div id="buttonsContainer">
+            <button id="quizButton">Generate Quiz</button>
+            <button id="bulletedButton">Generate Bulleted Points</button>
+        </div>
+    </main>
+    <script>
+        // Sample data for important notes based on subjects
+const notes = [
+    { subject: 'Math', content: '1. Review algebraic equations.\n2. Practice geometry problems.\n3. Study statistics basics.' },
+    { subject: 'Science', content: '1. Understand the scientific method.\n2. Review basic chemistry concepts.\n3. Explore human anatomy.' },
+    { subject: 'History', content: '1. Study major historical events.\n2. Review important dates and figures.\n3. Understand different civilizations.' },
+];
+
+// Function to display important notes
+function displayImportantNotes() {
+    const notesContainer = document.getElementById('notesContainer');
+    notes.forEach(note => {
+        const noteDiv = document.createElement('div');
+        noteDiv.classList.add('note');
+        noteDiv.innerHTML = `<h3>${note.subject}</h3><pre>${note.content}</pre>`;
+        notesContainer.appendChild(noteDiv);
+    });
+}
+
+// Function to generate a quiz (placeholder)
+function generateQuiz() {
+    alert("Quiz generated! (This is a placeholder)");
+}
+
+// Function to generate bulleted points (placeholder)
+function generateBulletedPoints() {
+    alert("Bulleted points generated! (This is a placeholder)");
+}
+
+// Event listeners for buttons
+document.getElementById('quizButton').addEventListener('click', generateQuiz);
+document.getElementById('bulletedButton').addEventListener('click', generateBulletedPoints);
+
+// Call the function to display notes when the page loads
+window.onload = displayImportantNotes;
+
+    </script>
+</body>
+</html>

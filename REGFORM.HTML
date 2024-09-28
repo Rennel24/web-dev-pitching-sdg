@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+         main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+
+         .container{
+            width: 300px;
+            height: 400px;
+            background-color: gold;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
+            
+
+         }
+
+         .container span{
+            font-weight: bold;
+            padding: 0 15px;
+            cursor: pointer;
+         }
+
+
+         .container form{
+           max-width: 300px;
+           position: absolute;
+           top: 130px;
+           padding: 0 20px;
+           transition: transform 1s;
+         }
+  
+         form input{
+            width: 100%;
+            margin-top: 5px;
+            padding:5px;
+
+
+        }
+
+        form button{
+            padding: 5px;
+            width: 100%;;
+            margin-top: 20px;
+
+
+        }
+
+        #loginForm{
+            left: -300px;
+        
+        }
+
+        #registerForm{
+            left: 0;
+
+        }
+
+
+    </style>
+</head>
+<body>
+          
+     <main> 
+          <div class="container" id="container"  >
+             
+             <div class="form-btn">
+                <span  class="white" onclick="login()"> Login</span>
+                 <span  class="white" onclick="register()">Register</span>
+             </div>
+                <form id="loginForm" >
+                     <input type="text" placeholder = "Username"/>
+                     <input type="password" placeholder = "Password"/>
+                    <button id="buttonIto" onclick="touchButton(10,10)">Login</button>
+                </form>   
+                <form id="registerForm" >
+                    <input type="text" placeholder = "Username"/>
+                    <input type="text" placeholder = "Email"/>
+                    <input type="text" placeholder = "Password"/>
+                    <button>Register</button>
+               </form>  
+          </div>
+         
+     </main>
+       
+
+
+    
+
+    <script>  
+              const loginForm =document.getElementById("loginForm");
+              const registerForm = document.getElementById("registerForm");
+              const button = document.getElementById("buttonIto");
+          
+
+              function login(){
+                loginForm.style.transform = "translateX(300px)";
+                registerForm.style.transform="translateX(300px)";
+            
+
+
+              }
+
+
+              function register(){
+                loginForm.style.transform = "translateX(0)";
+                registerForm.style.transform="translateX(0)";
+
+              }
+
+              function touchButton(numOne, numTwo){
+                alert(numOne * numTwo);
+
+              }
+
+              button.addEventListener("click", touchButton);
+
+
+             
+ 
+
+    
+
+
+          
+         
+    </script>
+</body> 
+
+</html>

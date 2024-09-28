@@ -1,0 +1,320 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .task-adder {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px; 
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 6px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #task-output {
+            margin-top: 15px;
+            display: none;
+        }
+
+        #task-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #task-list li {
+            padding: 8px;
+            margin-bottom: 6px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            font-size: 12px;
+        }
+
+        #task-list li p {
+            margin: 4px 0;
+        }
+
+        .task-filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
+        .task-filter-buttons button {
+            flex: 1;
+            font-size: 12px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #007BFF;
+            background-color: white;
+            color: #007BFF;
+            cursor: pointer;
+        }
+
+        .task-filter-buttons button.active {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="task-adder">
+        <h1>Task Manager</h1>
+        
+        <!-- Task Type Selector -->
+        <div class="form-group">
+            <label for="task-type">Select Task Type:</label>
+            <select id="task-type">
+                <option value="Assignment" selected>Assignment</option>
+                <option value="Quiz">Quiz</option>
+                <option value="Activity">Activity</option>
+                <option value="Recitation">Recitation</option>
+                <option value="Project">Project</option>
+            </select>
+        </div>
+
+        <form id="task-form">
+            <div class="form-group">
+                <label for="task-name" id="task-name-label">Assignment Name:</label>
+                <input type="text" id="task-name" name="task-name" placeholder="e.g. Math Homework, Quiz, Project" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject-name">Subject Name:</label>
+                <input type="text" id="subject-name" name="subject-name" placeholder="e.g. Algebra, History, Biology" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="deadline-date" id="deadline-date-label">Assignment Deadline (Date):</label>
+                <input type="date" id="deadline-date" name="deadline-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="deadline-time" id="deadline-time-label">Assignment Deadline (Time):</label>
+                <input type="time" id="deadline-time" name="deadline-time" required>
+            </div>
+
+            <div class="form-group">
+                <label for="study-time">Preferred Study Time (hours per day):</label>
+                <input type="number" id="study-time" name="study-time" min="1" max="8" required>
+            </div>
+
+            <div class="form-group">
+                <label for="priority">Priority Level:</label>
+                <select id="priority" name="priority" required>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+
+            <button type="submit" id="submit-btn">Add Assignment</button>
+        </form>
+
+        <!-- Task Filter Buttons -->
+        <div class="task-filter-buttons">
+            <button class="filter-btn" data-filter="all">All Tasks</button>
+            <button class="filter-btn" data-filter="Assignment">Assignments</button>
+            <button class="filter-btn" data-filter="Quiz">Quizzes</button>
+            <button class="filter-btn" data-filter="Activity">Activities</button>
+            <button class="filter-btn" data-filter="Recitation">Recitations</button>
+            <button class="filter-btn" data-filter="Project">Projects</button>
+        </div>
+        
+        <div id="task-output" class="task-output">
+            <h2>Added Tasks</h2>
+            <ul id="task-list">
+                <!-- Added tasks will appear here -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('task-type').addEventListener('change', function() {
+            const selectedType = this.value;
+
+            const taskNameLabel = document.getElementById('task-name-label');
+            const deadlineDateLabel = document.getElementById('deadline-date-label');
+            const deadlineTimeLabel = document.getElementById('deadline-time-label');
+            const submitButton = document.getElementById('submit-btn');
+
+            switch (selectedType) {
+                case 'Quiz':
+                    taskNameLabel.innerText = 'Quiz Name:';
+                    deadlineDateLabel.innerText = 'Quiz Deadline (Date):';
+                    deadlineTimeLabel.innerText = 'Quiz Deadline (Time):';
+                    submitButton.innerText = 'Add Quiz';
+                    break;
+                case 'Activity':
+                    taskNameLabel.innerText = 'Activity Name:';
+                    deadlineDateLabel.innerText = 'Activity Deadline (Date):';
+                    deadlineTimeLabel.innerText = 'Activity Deadline (Time):';
+                    submitButton.innerText = 'Add Activity';
+                    break;
+                case 'Recitation':
+                    taskNameLabel.innerText = 'Recitation Name:';
+                    deadlineDateLabel.innerText = 'Recitation Deadline (Date):';
+                    deadlineTimeLabel.innerText = 'Recitation Deadline (Time):';
+                    submitButton.innerText = 'Add Recitation';
+                    break;
+                case 'Project':
+                    taskNameLabel.innerText = 'Project Name:';
+                    deadlineDateLabel.innerText = 'Project Deadline (Date):';
+                    deadlineTimeLabel.innerText = 'Project Deadline (Time):';
+                    submitButton.innerText = 'Add Project';
+                    break;
+                default:
+                    taskNameLabel.innerText = 'Assignment Name:';
+                    deadlineDateLabel.innerText = 'Assignment Deadline (Date):';
+                    deadlineTimeLabel.innerText = 'Assignment Deadline (Time):';
+                    submitButton.innerText = 'Add Assignment';
+            }
+        });
+
+        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+        document.getElementById('task-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const taskType = document.getElementById('task-type').value;
+            const taskName = document.getElementById('task-name').value;
+            const subjectName = document.getElementById('subject-name').value;
+            const deadlineDate = document.getElementById('deadline-date').value;
+            const deadlineTime = document.getElementById('deadline-time').value;
+            const studyTime = document.getElementById('study-time').value;
+            const priority = document.getElementById('priority').value;
+
+            if (taskName && subjectName && deadlineDate && deadlineTime && studyTime && priority) {
+                const deadlineDateTime = `${deadlineDate} ${deadlineTime}`;
+
+                const task = {
+                    type: taskType,
+                    name: taskName,
+                    subject: subjectName,
+                    deadline: deadlineDateTime,
+                    studyTime,
+                    priority,
+                    done: false // New property to track the task state
+                };
+
+                tasks.push(task);
+                localStorage.setItem('tasks', JSON.stringify(tasks)); // Store tasks in localStorage
+                renderTaskList(tasks);
+                this.reset(); // Reset the form after submission
+            }
+        });
+
+        function renderTaskList(tasksToRender) {
+            const taskList = document.getElementById('task-list');
+            taskList.innerHTML = '';
+
+            tasksToRender.forEach((task, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <p><strong>${task.type}:</strong> ${task.name}</p>
+                    <p><strong>Subject:</strong> ${task.subject}</p>
+                    <p><strong>Deadline:</strong> ${task.deadline}</p>
+                    <p><strong>Study Time:</strong> ${task.studyTime} hours</p>
+                    <p><strong>Priority:</strong> ${task.priority}</p>
+                    <button class="done-btn" data-index="${index}">${task.done ? 'Undo' : 'Mark as Done'}</button>
+                    <button class="delete-btn" data-index="${index}">Delete</button>
+                `;
+                li.style.backgroundColor = task.done ? '#d4edda' : '#f9f9f9'; // Change background color if done
+                taskList.appendChild(li);
+            });
+
+            const taskOutput = document.getElementById('task-output');
+            taskOutput.style.display = tasksToRender.length ? 'block' : 'none';
+
+            // Add event listeners for done and delete buttons
+            document.querySelectorAll('.done-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.dataset.index;
+                    tasks[index].done = !tasks[index].done; // Toggle done state
+                    localStorage.setItem('tasks', JSON.stringify(tasks)); // Update localStorage
+                    renderTaskList(tasks);
+                });
+            });
+
+            document.querySelectorAll('.delete-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = this.dataset.index;
+                    tasks.splice(index, 1); // Remove task from array
+                    localStorage.setItem('tasks', JSON.stringify(tasks)); // Update localStorage
+                    renderTaskList(tasks);
+                });
+            });
+        }
+
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.dataset.filter;
+                const filteredTasks = filter === 'all' ? tasks : tasks.filter(task => task.type === filter);
+                
+                // Highlight the active button
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                renderTaskList(filteredTasks);
+            });
+        });
+
+        // Render tasks on page load
+        renderTaskList(tasks);
+    </script>
+</body>
+</html>

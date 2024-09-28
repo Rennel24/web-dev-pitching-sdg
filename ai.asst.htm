@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Help</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .chatbox {
+            border: 2px solid #333;
+            padding: 10px;
+            height: 400px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+        }
+        .user-input {
+            display: flex;
+            margin-top: 20px;
+        }
+        .user-input input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+        .user-input button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .explanation-buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .explanation-buttons button {
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .upload-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .upload-container input[type="file"] {
+            display: none;
+        }
+        .upload-container label {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        .premium-message {
+            color: red;
+            font-style: italic;
+            margin-top: 10px;
+        }
+        .chat-message {
+            margin: 10px 0;
+        }
+        .chat-message.user {
+            text-align: right;
+        }
+        .chat-message.bot {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Homework Help</h1>
+
+        <!-- Chatbox Area -->
+        <div class="chatbox" id="chatbox">
+            <!-- Chat messages will be appended here dynamically -->
+        </div>
+
+        <!-- User Input for Chat -->
+        <div class="user-input">
+            <input type="text" id="userInput" placeholder="Ask your question...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+        <!-- Explanation Buttons for AI Response -->
+        <div class="explanation-buttons">
+            <button onclick="explainSimple()">Explain in Simple Terms</button>
+            <button onclick="explainDetailed()">Explain in Detail</button>
+            <button onclick="explainExamples()">Explain with Examples</button>
+            <button onclick="explainStepByStep()">Explain Step by Step</button>
+        </div>
+
+        <!-- File Upload Section -->
+        <div class="upload-container">
+            <label for="fileInput">Upload File (PDF or Word)</label>
+            <input type="file" id="fileInput" accept=".pdf,.doc,.docx" onchange="handleFileUpload(event)">
+            <label for="imageInput" style="margin-left: 10px;">Upload Image (Premium)</label>
+            <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event)">
+        </div>
+        <div class="premium-message">Note: Image upload is a premium feature.</div>
+    </div>
+
+    <script>
+        // Function to handle sending a chat message
+        function sendMessage() {
+            const userMessage = document.getElementById('userInput').value;
+            if (userMessage.trim() !== '') {
+                // Add user message to chatbox
+                addChatMessage(userMessage, 'user');
+
+                // Simulate bot response with a simple explanation
+                const botResponse = getBotResponse(userMessage);
+                addChatMessage(botResponse, 'bot');
+                
+                // Clear input field
+                document.getElementById('userInput').value = '';
+            }
+        }
+
+        // Function to display chat messages
+        function addChatMessage(message, sender) {
+            const chatbox = document.getElementById('chatbox');
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('chat-message', sender);
+            messageElement.innerText = message;
+            chatbox.appendChild(messageElement);
+
+            // Scroll to the bottom of the chatbox
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        // Simulate bot response based on user's input
+        function getBotResponse(userMessage) {
+            return `I see that you're asking about "${userMessage}". Here's a brief explanation: ... (AI explanation goes here).`;
+        }
+
+        // Functions to provide different types of explanations
+        function explainSimple() {
+            const explanation = "This is a simple explanation of the topic. It uses basic language that's easy to understand.";
+            addChatMessage(explanation, 'bot');
+        }
+
+        function explainDetailed() {
+            const explanation = "This is a detailed explanation of the topic. It goes into more depth and covers all important aspects.";
+            addChatMessage(explanation, 'bot');
+        }
+
+        function explainExamples() {
+            const explanation = "Here are some examples to help you understand the topic better. Example 1: ... Example 2: ...";
+            addChatMessage(explanation, 'bot');
+        }
+
+        function explainStepByStep() {
+            const explanation = "This is a step-by-step explanation. Step 1: ... Step 2: ... and so on.";
+            addChatMessage(explanation, 'bot');
+        }
+
+        // Function to handle file upload
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                const fileName = file.name;
+                addChatMessage(`You uploaded: ${fileName}`, 'user');
+
+                // Simulate AI prompting what to do next with the uploaded file
+                const fileExtension = fileName.split('.').pop().toLowerCase();
+                if (fileExtension === 'pdf' || fileExtension === 'doc' || fileExtension === 'docx') {
+                    const botPrompt = `You uploaded a ${fileExtension.toUpperCase()} file. What would you like to do next? Analyze the content, summarize, or ask questions?`;
+                    addChatMessage(botPrompt, 'bot');
+                } else {
+                    addChatMessage('Unsupported file type. Please upload a PDF or Word document.', 'bot');
+                }
+            }
+        }
+
+        // Function to handle image upload for premium users
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                const fileName = file.name;
+                addChatMessage(`You uploaded an image: ${fileName}`, 'user');
+
+                // Simulate AI prompting what to do next with the uploaded image
+                const botPrompt = `You uploaded an image. What would you like to do next with it? Analyze the content or ask questions?`;
+                addChatMessage(botPrompt, 'bot');
+            }
+        }
+    </script>
+</body>
+</html>
