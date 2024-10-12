@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 10px;
+        }
+        #toggle{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+        }
+
+        .toggle2{
+            display:none;
+        }
+    </style>
+</head>
+
+        
+         <div id="toggle">HELLO</div>
+         <button onclick="showHide()">Click Here</button>
+
+<body> 
+    
+
+    <script>
+         let touchIt = document.getElementById("toggle");
+
+
+         function showHide(){
+           touchIt.classList.toggle('toggle2');
+         }
+    </script>
+</body>
+</html>
