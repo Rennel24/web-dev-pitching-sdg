@@ -1,0 +1,142 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+body {
+    background-image: url(https://wallpapers.com/images/hd/plain-white-background-3qzwpiavktxg11pr.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Styling the nav element */
+nav {
+    background-color: #556677;
+    padding: 16px;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling the nav links */
+.nav-link {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: "Tahoma", sans-serif;
+    color: #ecf0f1;
+}
+
+/* Styling all anchor tags to remove text decoration */
+a {
+    text-decoration: none;
+}
+
+/* Styling the landing div to center all text */
+#landing {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styling the profile picture */
+#profile {
+    height: 250px;
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+/* Styling the name heading */
+#name {
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+/* Styling the title heading */
+#title {
+    margin-top: 12px;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+/* Styling the intro paragraph */
+#intro {
+    width: 260px;
+    margin: auto;
+    font-weight: bold;
+}
+
+/* Styling the tools div */
+#tools {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Styling the tools-title heading */
+#tools-title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+/* Styling the tools-img class */
+.tools-img {
+    height: 100px;
+    width: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid #000000;
+    border-radius: 100px;
+}
+
+/* Styling the projects div */
+#projects {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Styling the card class */
+.card {
+    background-color: #b6b8c3;
+    height: 400px;
+    width: 600px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+    padding: 50px 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+/* Styling the card-img class */
+.card-img {
+    padding-top: 15px;
+    height: 300px;
+    width: 300px;
+}
+
+/* Styling the contact footer */
+#contact {
+    text-align: center;
+    padding: 16px;
+    margin-top: 4px;
+    background-color: #556677;
+}
+
+footer a {
+    margin-top: 20px;
+    margin: 0 10px;
+    color: #ecf0f1;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
