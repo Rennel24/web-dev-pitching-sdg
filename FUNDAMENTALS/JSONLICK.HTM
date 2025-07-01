@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>BUTTON ONCLICK</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        #container {
+            border: solid 1px;
+            height: 17cm;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px; /* Reduced gap between buttons */
+            width: 150%;
+            padding: 0 11px; /* Added padding to avoid buttons touching viewport edges */
+        }
+
+        button {
+            flex: 1;
+            min-width: 195px; /* Reduced minimum width for buttons */
+            max-width: 240px; /* Reduced maximum width for buttons */
+            height:130px;
+            color: rgb(253, 253, 253);
+            background: linear-gradient(to right, rgb(222, 52, 0), rgb(184, 87, 1));
+            font-family: Cambria;
+            font-size: 14px; /* Reduced font size slightly */
+            border-radius: 10px;
+            font-weight: bold;
+            border: none;
+            transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+        }
+
+        button:hover {
+            border: 2px solid;
+            box-shadow: 3px 3px 3px 1px rgba(243, 222, 0, 0.802), -3px -3px 3px 1px rgba(17, 0, 146, 0.802);
+            transform: rotateZ(-10deg);
+        }
+
+        h2 {
+            margin: 0;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+
+        #groupings{
+            display: flex;
+            justify-content: center;
+            margin-bottom: -10%;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        #groupings h1:hover{
+            color: blue;
+        }
+
+
+        div h1{
+            color: white;
+            
+            width: 50%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="groupings">
+        <h1>GROUPINGS KUNWARI:</h1>
+     </div>
+    <div id="container">
+         
+        <div class="button-container">
+            <button onclick="toggleName(this, 'ANNE FLORENCE', 'DE CHAVEZ')"><h2>ANNE FLORENCE</h2></button>
+            <button onclick="toggleName(this, 'RAYVER IAN', 'TORES')"><h2>RAYVER IAN</h2></button>
+            <button onclick="toggleName(this, 'MARIANNE', 'BALITA')"><h2>MARIANNE</h2></button>
+            <button onclick="toggleName(this, 'RENNEL', 'SENYAHAN')"><h2>RENNEL</h2></button>
+            <button onclick="toggleName(this, 'MIKE KENLEY', 'ABANTE')"><h2>MIKE KENLEY</h2></button>
+        </div>
+    </div>
+
+    <script>
+        function toggleName(button, firstName, lastName) {
+            const h2 = button.querySelector('h2');
+            if (h2.textContent === firstName) {
+                h2.textContent = lastName;
+            } else {
+                h2.textContent = firstName;
+            }
+        }
+    </script>
+</body>
+</html>

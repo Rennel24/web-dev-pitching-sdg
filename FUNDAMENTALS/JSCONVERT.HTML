@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONVERTION</title>
+</head>
+
+<body>
+     
+     
+</body>
+    
+        <script>
+     
+           
+          let aa = "10";
+          bb = Number(aa);
+          console.log(bb, typeof bb);             //String to number
+
+         let cc = 22;
+         let dd = String(cc);
+         console.log(dd, typeof dd);             //number to String
+
+         let ee = 1;
+         let ff = Boolean(ee);
+         console.log(ff, typeof ff);              //number to boolean
+
+         let gg = false;
+         let hh = Number(gg);                   //boolean to number
+         console.log(hh, typeof hh); 
+
+
+         let x
+         console.log(x, typeof x);          //undefined
+
+         let y = "";
+         console.log(y, typeof y);          //undefined
+
+     
+         let number = 6;
+         let num = "6";
+         console.log( number + num);
+
+        let b
+        b= 8;
+        b = b + " ";            //JavaScript converts the number to a string
+        console.log(b, typeof b);
+        b = b -2;
+        console.log(b, typeof b); 
+
+
+         
+
+         let pointOne = String(5)              //convert to string;
+         console.log(pointOne, typeof pointOne);
+        
+
+         let a 
+         console.log(a);
+         a= 5;
+         console.log(a, typeof a); // 5 number
+
+
+
+        let numOne = 5;
+        let numTwo = "5";
+        console.log(parseInt(numTwo) + numOne); //"5" to 5 + 5 =10//
+        numTwoo = numOne, numTwo;
+        console.log(numTwoo, typeof numTwoo);
+        
+
+
+
+
+        let numThree, numFour;
+        numThree = "10";
+        numFour = 10;
+        console.log(numFour + parseInt(numThree));
+ 
+
+        let numFive = "8";
+        let numSix = "9";
+        let total = numFive * numSix;
+        console.log(parseInt(total), typeof total);
+
+
+        let numSeven = "8";
+        let numEight = "9";
+        numSeven += 9 + 8;      //  9 + 8 = 17  +  8 =  817
+        numEight += 8 + 9;     //   8 + 9 = 17  +  9 =  917
+        let product = numSeven * numEight;  //numSeven - 817 * numEight - 917  = 749189 
+        console.log(parseInt(product));
+
+
+
+        let numNine = "45";
+        let numTen = "54";
+        console.log(parseInt(numNine * numTen));    //same result with the next//
+
+
+        let numEleven = "45";
+        let numTwelve = "54";
+        console.log(parseInt(numEleven) * numTwelve);   /*because numTwelve auto convert to String
+                                                        because of multiply operation*/
+
+        let numThirteen = "78";
+        let numFourteen = "87";
+        console.log(numThirteen * numFourteen);     //auto convert into integer
+
+
+        let numFifteen = "1000";
+        let Sixteen = "54";
+        console.log("The result is: " +  parseInt(numFifteen) / Sixteen);   //auto convert
+
+
+
+        //================================================================//
+         let numSevenTeen = "100.098";
+         let numEighteen = "200.35";
+         console.log(parseFloat(numSevenTeen + " "));           //Convert String to Floating point number//
+         console.log(parseFloat(numEighteen));
+
+
+        let numTwenty = "100";
+        let numTwentyOne = true;                    //Concert any Data type to number//  
+        let numTwentyTwo = false;
+        let numTwentyThree = "134renzy";          //output Nan not a number, because the entire string isn't numeric//
+       console.log(Number(numTwenty));
+       console.log(Number(numTwentyOne));           
+       console.log(Number(numTwentyTwo));
+       console.log(Number(numTwentyThree));
+
+  //======================================================================================//
+        let numTwentyFour = 1;          //numbers to boolean
+        let numTwentyFive = 0;
+        let textOne ="Hello";
+        let textTwo = "";
+        console.log(Boolean(numTwentyFour));
+        console.log(Boolean(numTwentyFive));        
+        console.log(Boolean(textOne));
+        console.log(Boolean(textTwo));
+
+
+
+
+
+//===========================C O N V E  R T I O N====================================//
+ 
+       let numTwentySix;
+       let numTwentySeven;
+       numTwentySix = "65";
+       numTwentySeven = "56";
+       numTwentySix = parseInt(numTwentySix); 
+       numTwentySeven = parseInt(numTwentySeven);
+
+       console.log(numTwentySix + numTwentySeven, typeof numTwentySix, typeof numTwentySeven);
+
+       
+//==================================================================================//
+       let numTwentyNine;
+       let numThirty;
+       numTwentyNine = "67";
+       numThirty = "67";
+       numTwentyNine = parseInt(numTwentyNine);   //convert to int
+       numThirty= parseInt(numThirty);           //convert to int
+       combinee = (numTwentyNine, numThirty);     
+       console.log(numTwentyNine + numThirty, typeof numTwentyNine, typeof numThirty);
+       
+//====================================================================================//
+
+
+
+  //===========================C O N V E  R T I O N====================================//
+
+        let convertToInt= "6";
+        convertToInt = parseInt(convertToInt);
+        console.log(convertToInt);
+
+
+        let convertToIntt= "9";
+        convertToIntt = parseInt(convertToIntt)
+        console.log(convertToIntt, typeof convertToIntt);
+
+
+       let convert = 10;
+       convert = String(convert);                // 10 to "10"//
+       console.log(convert,typeof convert);      // 10 string    
+
+  //===========================C O N V E  R T I O N====================================//
+
+
+
+     let ign = 78;
+     console.log(ign + " ");
+
+//=====================================================================//
+     let numThreeOne = "3";
+     let numThreeTwo = "3"
+     let numThreeThree = numThreeOne + numThreeTwo;
+     let result = parseInt(numThreeThree);
+     console.log(result, typeof result);
+
+//===============================================================================//
+
+
+     let numThreeFour = "55";
+     let numThreeFive = "66";
+     let numThreeSix = numThreeFour + numThreeFive;
+     let numThreeSeven = parseFloat(numThreeSix);
+     let numThreeEight =  numThreeSeven+ numThreeOne + numThreeTwo;
+     console.log(numThreeEight);
+
+//===============================================================================//
+
+ 
+
+    
+         
+        
+
+
+
+
+  
+
+
+        </script>
+ 
+</html>

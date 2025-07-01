@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACE Explorer</title>
+    
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #004080;
+}
+
+#visualization {
+    margin-top: 20px;
+}
+
+#dataDisplay {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #004080;
+    background-color: #e6f7ff;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PACE Explorer</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#data">Data Visualizations</a></li>
+                <li><a href="#resources">Educational Resources</a></li>
+                <li><a href="#community">Community Forum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Welcome to PACE Explorer</h2>
+            <p>Your journey into ocean data starts here!</p>
+        </section>
+        <section id="data">
+            <h2>Data Visualizations</h2>
+            <div id="visualization">
+                <button id="showDataBtn">Show Sample Data</button>
+                <div id="dataDisplay"></div>
+            </div>
+        </section>
+        <section id="resources">
+            <h2>Educational Resources</h2>
+            <ul>
+                <li><a href="#">Download Lesson Plans</a></li>
+                <li><a href="#">View Videos</a></li>
+            </ul>
+        </section>
+        <section id="community">
+            <h2>Community Forum</h2>
+            <p>Join the discussion!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 PACE Explorer. All Rights Reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('showDataBtn').addEventListener('click', function() {
+    const dataDisplay = document.getElementById('dataDisplay');
+    dataDisplay.innerHTML = '<p>Sample data from PACE: Phytoplankton concentration in the Pacific Ocean: 300 cells/ml.</p>';
+});
+
+    </script>
+</body>
+</html>

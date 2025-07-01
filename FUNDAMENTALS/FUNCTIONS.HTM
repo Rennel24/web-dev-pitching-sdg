@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    
+
+
+
+    <script>
+           
+   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~B A S I C    S Y N T A X~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~// 
+         
+           let a = 6;    //Variable declaration  
+           let b = 8     //Variable declaration 
+        function sayAdd(){       // Define a function named 'sayAdd'
+            console.log(a + b); // Inside the function, print the sum of 'a' and 'b' to the console    //LOCAL VARIABLES
+
+        }
+        sayAdd();     // Call the function 'sayAdd' to execute its code
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+         function sayString(){
+            console.log("printing this three times");
+            console.log("printing this three times");
+            console.log("printing this three times");   
+         }
+ 
+         sayString();    
+ //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // 
+
+
+
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // 
+         function sayString(){
+            console.log("infinite recursion");             //this cant be printed
+            console.log("printing this three times");     //this cant be printed
+            console.log("printing this three times");     //this cant be printed
+
+            //sayString();        //calling itself that leads to  infinite recursion.
+         }
+ //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ // 
+
+
+
+
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //    
+         function called(){
+             console.log("CALLING THE FUNCTION THREE TIMES")
+         }
+
+        called();
+        called();
+        called();
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~L O C A L  V A R I A B L E~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+
+      function lVariable() {
+           let lVariable = 5;                           //LOCAL VARIABLE
+           console.log(lVariable + lVariable);
+      }
+       lVariable();
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~G L O B  A L   V A R I A B L E~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//          
+              
+         let gVariable = "String";       //global variable
+        function global(){     
+        }
+        
+         console.log(gVariable);           //global variable
+
+ //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//        
+       
+        function srCode(srCode){
+            console.log("Rennel srcode is: " + srCode)      
+        }
+          srCode(2400424);
+          srCode(2300424);
+    
+
+
+
+ //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+  
+        function age(ageOne, ageTwo){          //parameters (they are placeholder or variable)
+             console.log("Renzy is " + ageOne + " years old");
+             console.log("Mosh is " + ageTwo + " years old");  
+
+        }
+              age(19, 18);   //arguments(values to pass to the function);
+
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`//          
+        function age(hobbyOne, hobbyTwo)  {     
+              let hobby  = "Volleyball"
+             console.log("Renzy hobby are " +  hobbyOne + " and " + hobby);
+             console.log("Renzy hobby are " +  hobbyOne + " and " + hobby);
+             console.log("Renzy hobby are " +  hobbyOne + " and " + hobby);
+        }  
+           age("mobile legends");       
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+ 
+             function subtract(x,y){
+                  let result = x - y ;
+                  console.log(result);
+                    return result;
+
+             }
+                subtract(5,3);
+                let difference = subtract(5, 3); // Call the function and store the result
+
+
+
+                function divide(x,y){
+                  let result = x / y ;
+                    return result;
+
+             }
+                let outcome =  divide(8,2);
+                console.log(outcome);
+
+
+
+                
+                function multiply(x,y){
+                  let result = x * y;
+                   return result;  
+             }
+                    console.log(multiply(4,2));
+
+    
+
+
+                function addThis(d, e, f){
+                    return result = d + e;
+                }
+
+                addThis(5,5,0);
+                console.log(result);
+
+
+
+                function naming(nameOne,nameTwo){
+                    let combine = nameOne + " will only choose " + nameTwo;
+                     console.log(combine);
+                     return combine;    
+                }
+
+                 naming("Rennel","Joan");
+
+
+
+
+
+                 function students(boy,girl){
+                    return combine = boy + " should only choose " + girl;
+                }
+
+                 students("Rennel","Joan");
+                 console.log(combine);
+
+
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+                 function multiplyy(v,y){
+                    return v * y;
+                 }
+                 function addd(v,y){
+                    return v + y;
+                 }
+                 function subtractt(v,y){
+                    return v - y;
+                 }
+
+
+                 console.log(multiplyy(8,5));
+                 console.log(addd(8,5));
+                 console.log(subtractt(5,2));
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+                 function dividee(v,y){
+                      return resultt = v / y;
+                 }
+                 dividee(10,2);
+                 console.log(resultt);
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
+
+                 function combo(tank, fighter){
+                      let comboo = tank + " and " + fighter ;
+                      console.log(comboo);
+                      return comboo;
+                     
+                 }
+
+                 combo("balmond", "lapu");
+
+ 
+  
+              let ENIAC = 10;
+            let UNIVAC = 20;
+            let UNIVAC2 = 30;
+
+            function calculate(ENIAC, UNIVAC, UNIVAC2) {
+                let result = ENIAC + UNIVAC * UNIVAC2 / 10; 
+
+                if (result > 50) {          
+                    result++;                                //71
+                } else if (result < 30) {
+                    result--;                 r
+                } else {
+                    result += 5;             
+                }
+
+                return result;              
+            }
+
+            console.log(calculate(ENIAC, UNIVAC, UNIVAC2));  //71
+
+
+
+            let IBM1401 = 15;
+            let UNIVACII = 25;
+            let IBM7094 = 35;
+
+            function compute(IBM1401, UNIVACII, IBM7094) {
+                let total = IBM1401 * UNIVACII / 5 + IBM7094; 
+
+                if (total < 50) {            
+                    total--;               
+                } else if (total >= 80) {
+                    total += 10;            
+                } else {
+                    total++;              
+                }
+
+                return total;               
+            }
+            console.log(compute(IBM1401, UNIVACII, IBM7094));  //120
+
+
+
+            let PDP8 = 40;
+            let IBM360 = 50;
+            let CDC6600 = 60;
+
+            function analyze(PDP8, IBM360, CDC6600) {
+                let intermediate = (PDP8 + IBM360) * CDC6600 / 100; // Use arithmetic operators
+
+                if (intermediate >= 50) {  
+                    intermediate += 15;   
+                } else if (intermediate < 30) {
+                    intermediate -= 10;    
+                } else {
+                    intermediate *= 2;   
+                }
+                return intermediate;        
+            }
+            console.log(analyze(PDP8, IBM360, CDC6600));
+
+            
+
+         
+
+//===========================================A R R O W   F U N C T I O N==========================================//
+        
+
+             no = () => 'HELLO';             //NO PARAMETERS
+             console.log(no());      
+
+
+              let single = z => z+z; {         //SINGLE PARAMETER
+              }                          
+              console.log(single(5));
+
+             let square = (x, y) => {               //MULTIPLE PARAMETERS
+                return x + y;
+             }
+
+           
+            add  = (numOne, numTwo) =>  {
+                  return numOne + numTwo;
+           } 
+            
+           console.log(add(7,6));
+
+        
+           divide = (numthree, numFour) => numthree / numFour;
+           console.log(divide(10,5));
+
+
+
+           let pemdas = (ab, ac, ad, ae, af) =>  {
+                       if(ab >= ac){
+                           return  "pogi si rennel";
+                 
+                       }else if(ac > ab,ad,ae,af){
+                        return "pretty mosh";
+                       }else{
+                        return "nothing"
+                       }
+                      
+                    }  
+                  console.log(pemdas(20,21, 19, 18, 17));
+
+
+    
+    
+ 
+
+                
+
+    
+
+
+                
+                  
+
+                
+           
+
+ 
+
+    </script>
+</body>
+</html>

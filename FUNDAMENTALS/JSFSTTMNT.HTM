@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+    <body>
+
+ 
+         <script> 
+               let num = 0;
+               num = 5;
+            
+               if(num >=  6) {    //condition
+                 console.log("Welcome");    // Code to execute if the condition is true
+               }
+              console.log("Youre not welcome"); //this will execute cause condition is false
+
+               let a = 7;
+               if(num <= a){
+                  console.log("5 is less than 7");  
+               }
+
+               let b = 8;
+               if(b = 7){
+                  console.log("they are equal")
+               }
+               console.log("they are not equal"); //this will execute
+ 
+                 
+              let c = 5;
+              let d = "5";
+               if(c == d){
+                console.log("5 and 5 is equal");
+               }
+
+             if(c === d){
+                console.log("Do you think this work?")
+             }
+             console.log("No, because you are using Strict equal");
+
+ 
+            if(c != d){
+                console.log("You are using strict equal");
+            }
+              console.log("Ther are equal because you are not using strict equal");
+
+            if(c !== d){
+                console.log("You finnally used strict equal");
+            }
+
+              let e = 6;
+              let f = 8;
+             if(e <= f){
+                console.log("You are correct");  //this will be printed//
+             }
+             else{
+                console.log("You are incorrect");
+
+             }
+              console.log("This will also be executed");
+
+
+
+
+              let grade = 98.9;
+              if(grade >=98){
+                console.log("You are with highest honor"); //this will be printed
+            }else if(grade <= 97){ 
+                console.log("You are with high honor");
+
+            }else if(grade <= 94){
+                  console.log("You are with honor");
+            }else if(grade <= 89){
+                   console.log("You are just passed");
+            }else if(grade <= 74){
+                console.log("You are failed");
+            }
+            else{
+               console.log("You are not enrolled");
+            }
+
+
+            let number = 7; 
+          if(number % 2  === 0 ){
+            console.log(number + " is even.");
+          }else {
+            console.log(number + " is odd")  //this will be printed
+            
+          }
+
+          if(number * 2 == 14){
+            console.log(number + " You are handsome");  //this will be printed
+          }else{
+            console.log("You are not handsome");
+          }
+
+
+          if(number * 2 - 5 == 14){
+            console.log(number + " You are handsome");
+          }else{
+            console.log("You are not handsome");  //this will be printed
+          }
+
+               
+        let painting = -15; 
+
+        if (painting > 0) {
+        console.log(painting + " is positive.");
+        } else if (painting < 0) {
+        console.log(painting + " is negative."); //this will be printed
+        } else {
+        console.log(painting + " is zero.");
+        }
+
+       
+        
+        let mark = 85; 
+        if (mark >= 90) {
+            console.log("Grade: A");
+            console.log("Status: Pass");
+        } else if (mark >= 80) {
+            console.log("Grade: B");                //THIS WILL EXECUTE
+            console.log("Status: Pass");
+        } else if (mark >= 70) {
+            console.log("Grade: C");
+            console.log("Status: Pass");
+        } else if (mark >= 60) {
+            console.log("Grade: D");
+            console.log("Status: Pass");
+        } else {
+            console.log("Grade: F");
+            console.log("Status: Fail");
+        }
+
+
+
+
+        let initialBalance = "100.50"; // Example balance as a string
+        let amountToWithdraw = "30.25"; // Example amount to withdraw as a string
+        // Convert strings to numbers
+        initialBalance = parseFloat(initialBalance);
+        amountToWithdraw = parseFloat(amountToWithdraw);
+        // Calculate new balance
+        let newBalance = initialBalance - amountToWithdraw;
+        // Determine and display account status
+        if (newBalance < 0) {
+            console.log("Your account is overdrawn.");
+        } else if (newBalance === 0) {
+            console.log("Your account balance is zero.");
+        } else if (initialBalance < amountToWithdraw) {
+            console.log("Insufficient funds.");
+        } else {
+            console.log("Transaction successful. Your new balance is $" + newBalance.toFixed(2));
+       }
+  
+
+
+       let ramSpeed = 3200; // in MHz
+      let cpuSpeed = "3500"; // in MHz
+      cpuSpeed = Number(cpuSpeed); //3500 (number)
+      let isRamSpeedCompatible = ramSpeed >= cpuSpeed;  //false
+      let isCpuSpeedTooHigh = cpuSpeed > 4000;  //false
+      console.log("Is RAM speed compatible with CPU speed? " + isRamSpeedCompatible);  //false
+      console.log("Is CPU speed greater than 4000 MHz? " + isCpuSpeedTooHigh); //false
+
+
+        let ageAtDeath = 35; 
+        let ageAtFirstNovel = "26"; 
+      ageAtFirstNovel = Number(ageAtFirstNovel); //26
+
+      if (ageAtDeath > ageAtFirstNovel) {
+      console.log("Rizal achieved significant work before his death.");
+      } else {
+      console.log("Rizal's major works were created later in life.");
+      }
+      let ageMessage = "Rizal's age when he wrote his first novel: " + ageAtFirstNovel; // Concatenation
+      console.log(ageMessage);
+
+
+      let educationInAteneo = "true"; 
+      let educationInUST = "false"; 
+
+      if (educationInAteneo === "true" && educationInUST === "true") {
+        console.log("Rizal was educated in both Ateneo and UST.");
+      } else if (educationInAteneo === "true") {
+        console.log("Rizal was educated in Ateneo.");   //THIS WILL EXECUTE
+      } else if (educationInUST === "true") {
+        console.log("Rizal was educated in UST.");
+      } else {
+        console.log("Rizal did not attend Ateneo or UST.");
+      }
+
+      let educationMessage = "Rizal's education: Ateneo - " + educationInAteneo + ", UST - " + educationInUST;
+      console.log(educationMessage);
+
+
+
+      let noliImpactScore = 85; // Impact score of Noli Me Tangere
+      let filiImpactScore = "90"; // Impact score of El Filibusterismo
+      filiImpactScore = Number(filiImpactScore); // Convert filiImpactScore to a number
+
+      if (noliImpactScore > filiImpactScore) {
+        console.log("Noli Me Tangere had a greater impact.");
+      } else if (noliImpactScore < filiImpactScore) {
+        console.log("El Filibusterismo had a greater impact.");  //THIS WILL BE PRINTED
+      } else {
+        console.log("Both novels had equal impact.");
+      }
+      let impactMessage = "Impact scores: Noli - " + noliImpactScore + ", Fili - " + filiImpactScore;
+      console.log(impactMessage);
+
+
+
+        let travelDaysToSpain = 60; // Days it took Rizal to travel to Spain
+        let travelDaysToJapan = "30"; // Days it took Rizal to travel to Japan
+        let totalTravelDays;
+        travelDaysToJapan = Number(travelDaysToJapan); //30 TO 30 
+        totalTravelDays = travelDaysToSpain + travelDaysToJapan;   //90
+        totalTravelDays++;   // 90 + 1  + 91
+
+        if (totalTravelDays > 100) {
+          console.log("Rizal traveled for more than 100 days.");   //not executed
+        } else {
+          console.log("Rizal traveled for less than or equal to 100 days.");      //this will be executed
+        }
+        let travelMessage = "Total days Rizal traveled: " + totalTravelDays;  // 91
+        console.log(travelMessage);
+
+
+
+        let hoursWritingPerDay = 4; 
+        let daysWritingPerWeek = "5"; 
+        let totalHoursWriting;
+
+        daysWritingPerWeek = Number(daysWritingPerWeek);  //5
+        totalHoursWriting = hoursWritingPerDay * daysWritingPerWeek; //20
+
+        if (totalHoursWriting > 20) {
+          console.log("Rizal devoted more than 20 hours to writing each week.");
+        } else {
+          console.log("Rizal devoted 20 hours or less to writing each week.");
+        }
+
+        let writingMessage = "Total hours Rizal devoted to writing per week: " + totalHoursWriting; // Concatenate writing message
+        console.log(writingMessage);
+
+
+
+
+        let influenceYearsInSpain = 10; 
+        let influenceYearsInPhilippines = "15"; 
+        influenceYearsInPhilippines = Number(influenceYearsInPhilippines); //15
+        let totalInfluenceYears = influenceYearsInSpain + influenceYearsInPhilippines; //25
+        totalInfluenceYears++; //26
+        if (totalInfluenceYears > 20) {
+          console.log("Rizal's influence spanned over 20 years."); //this will be printed
+        } else {
+          console.log("Rizal's influence spanned 20 years or less.");
+        }
+
+
+
+        let influenceMessage = "Total years of Rizal's influence in Spain and the Philippines: " + totalInfluenceYears; 26
+        console.log(influenceMessage);
+        let ageStartedSchool = 9; 
+        let ageGraduated = "16"; 
+        ageGraduated = Number(ageGraduated); //16
+
+        let yearsInSchool = ageGraduated - ageStartedSchool; //16- 9  = 7 
+        yearsInSchool++; // 7 + 1 = 8 
+        if (yearsInSchool <= 8) {
+        console.log("Rizal completed his education in less than or equal to 8 years.");
+        } else {
+        console.log("Rizal took more than 8 years to complete his education.");
+        }
+        let educationMessagee = "Years Rizal spent in school: " + yearsInSchool;
+        console.log(educationMessagee);
+
+           
+         let itc = 97;
+         let lwor = "98.7" ;
+          
+        if(itc <= lwor){
+          lwor = parseFloat(lwor);
+          ++itc
+          console.log(lwor + " is your higest grade");
+        }
+        else if(itc >= lwor){
+          console.log(itc + " is your higest grade");
+        }
+        else{
+            console.log("none of the above");
+        } 
+         console.log("Introduction to computing  is now :"  + itc);
+
+
+
+   
+
+         let noliMeTangereWords = 105600; // Number of words in "Noli Me Tangere"
+        let elFilibusterismoWords = "110400"; // Number of words in "El Filibusterismo"
+
+        if (noliMeTangereWords <= elFilibusterismoWords) {  
+            elFilibusterismoWords = Number(elFilibusterismoWords);
+            noliMeTangereWords++; //105601; 
+            console.log(elFilibusterismoWords + " is the word count of Rizal's longer novel."); //105600 is the word count of Rizal's longer novel
+        } else if (noliMeTangereWords >= elFilibusterismoWords) {
+            console.log(noliMeTangereWords + " is the word count of Rizal's longer novel.");
+        } else {
+            console.log("Word counts are the same for both novels.");
+        }
+
+        console.log("\"Noli Me Tangere\" is now: " + noliMeTangereWords + " words.");  //105601
+
+
+
+
+     
+        let respond = prompt("Please enter yes or no kung may pasok :");
+        respondOne = "yes";
+        respondTwo = "no";
+
+        if (respond === respondOne) {
+          console.log("mayroong pasok");
+        } else if (respond === respondTwo) {
+          console.log("walang pasok");
+        } else {
+          console.log("Invalid input");
+        }
+
+
+        
+
+
+
+
+
+
+       
+
+
+
+  
+
+
+
+
+
+
+            
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+         
+             
+
+
+
+
+               
+         </script>
+    </body>
+
+
+</html>

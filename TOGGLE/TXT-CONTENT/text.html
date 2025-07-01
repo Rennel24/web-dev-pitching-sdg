@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIFFERENT TEXT CONTENT</title>
+</head>
+
+<body>
+    
+      <p>HELLO JOAN</p>
+
+
+
+      <script>
+          const callSign = document.getElementsByTagName("p")[0];
+
+          function changeContent(){
+            if(callSign.textContent == 'HELLO JOAN'){
+              callSign.textContent = 'HELLO MOSH';
+              callSign.innerHTML = '<p><b>HELLO MOSH</b></p>';
+            }
+            else{
+              callSign.textContent = 'HELLO JOAN';
+              callSign.innerHTML = '<p>HELLO JOAN</p>';
+            }
+          }
+          callSign.addEventListener("click", changeContent);
+
+
+
+
+      </script>
+
+</body>
+ 
+
+</html>

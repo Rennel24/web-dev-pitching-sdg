@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVASCRIPT ARRAYS</title>
+
+
+    <style>
+        body{
+            background-color: aqua;
+
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            border: solid;
+        }
+
+
+        .s-container{
+            background-color: white;
+            width: 50%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: solid;
+        }
+
+
+    </style> 
+</head>
+<body>
+    
+         
+          <div class="container">
+             <div class="s-container">
+                <h1>HELLO MOSH</h1>
+             </div>
+
+          </div>
+
+
+
+    <script>
+         //ARRAYS
+ 
+        const mixedArray = [1, 'two', true,7];
+        console.log(mixedArray); //print different data types in an array
+            
+
+         const index =  [1,2,3,4,5];
+         console.log(index);  //prints all the elements in the array because there is no index specified
+         console.log(index[0]);
+         console.log(index[1]);
+         console.log(index[2]);
+
+                       // 0       1      2       3       4 // INDEXES
+         let names = ['Mosh', 'John', 'Dem', 'Jane', 'Doe'];
+         console.log(names[1]); //prints John because it is the first index//
+         console.log(names[0,1,2,3,4]);  //print Doe because it is the last index
+         console.log(names.length);      //.length is an array method that returns the number of elements in an array
+        
+        //CHANGING THE VALUES OF AN ARRAY//
+         names[2] = 'Alex';
+         console.log(names[2]); //index 2 is now Alex because we changed the value of index 2
+         console.log(names); //prints the whole array with the new value of index 2
+
+
+
+
+
+          //ADDING ELEMENTS TO AN ARRAY      .PUSH is an array method that adds an element to the end of an array
+        const tStacks = ['HTML', 'CSS', 'JAVASCRIPT', 'REACT', 'NODEJS'];
+           tStacks.push('PYTHON'); //adds an element to the end of the array
+           tStacks.push(6); //can also add number because arrays can hold different data types//
+           console.log(tStacks);
+           const tStacksLength = tStacks.length;
+           console.log(tStacksLength); //prints the number of elements in the array
+    
+    
+
+        const frameworks = ['REACT', 'ANGULAR', 'VUE', 'EMBER', 'BACKBONE'];
+        let indexOf = frameworks.indexOf('ANGULAR'); //indexOf is an array method that returns the index of an element in an array
+        console.log(`Angular framework has an index of ${indexOf}`);                                               
+                                                     //this is happen because the index of an array starts from 0
+
+
+
+       //ARRAY METHOD IS A VERY POWERFUL TOOL IN JAVASCRIPT THAT CAN BE USED TO MANIPULATE ARRAYS //                                             
+
+        // ARRAY METHODS  //
+        //ADDING ELEMENT
+        const integer = [2,3,4,5,6,7,8,9];
+        let addToFirst = integer.unshift(1); //unshift is an array method that adds an element to the beginning of an array
+        console.log([0]);
+
+        //REMOVING ELEMENT
+        const evenNumberss = [2,4,6,8,10];
+        let removeFirst = evenNumberss.shift(); //.sfhit is an array method that removes the first element of an array
+        console.log(evenNumberss); //prints the array without the first element
+
+
+
+                                    //USEFUL OF ARRAY METHODS//
+     //join method
+      const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
+      let join =colors.join(' and ')  //join is an array method that joins all the elements of an array into a string
+      console.log(join); //prints the elements of the array as a string because we used the join method
+
+      //concat method
+      const oddNumbers = [1,3,5,7,9];
+      const evenNumbers = [2,4,6,8,10];
+      const primeNumbers = [2,3,5,7];
+      let concat = oddNumbers.concat(evenNumbers); //concat is an array method that combines two arrays
+      console.log(concat); //prints the two arrays combined into one array
+
+     let concat2 =evenNumbers.concat(oddNumbers); //we can also combine the arrays in a different order
+     console.log(concat2); //prints the two arrays combined into one array
+
+     let concat3 = oddNumbers.concat(evenNumbers,primeNumbers); 
+     console.log(concat3); //prints the three arrays combined into one array
+
+     
+     //SPLICE METHOD IS A VERY POWERFUL ARRAY METHOD THAT CAN BE USED TO ADD OR REMOVE ELEMENTS FROM AN ARRAY
+     const cars = ['Toyota', 'Honda', 'Nissan', 'Ford', 'Chevrolet']; //honda will be deleted
+     cars.splice(1,1); //This will delete the second element in the array
+     console.log(cars); //prints the array without the second element
+     //SPLICE METHOD IS A VERY POWERFUL ARRAY METHOD THAT CAN BE USED TO ADD OR REMOVE ELEMENTS FROM AN ARRAY
+     const property = ['house', 'car', 'land', 'building', 'estate'];   
+     property.splice(0,1); //This means that the first and second element will be deleted
+     console.log(property); //prints the array without the third element
+
+                               //deleted deleted deleted
+     const fruits = ['apple', 'banana', 'orange', 'mango', 'grape'];
+     fruits.splice(1,3, 'bayabas', 'rambutan', 'sinturis'); //this means that the second, third and fourth element will be deleted and replaced with the new elements
+     console.log(fruits); //the outputs are apple, bayabas, rambutan, sinturis, grape
+
+
+     //FLAT METHOD
+     const negativeNumbers = [[-1,-2,-3],-4,-5,-6];
+     let flat = negativeNumbers.flat(); //flat is an array method that flattens an array of arrays into a single array
+     console.log(flat); //prints the array of arrays as a single array
+
+    const naturalNumbers = [[1,2,[3,3.5],4,5,6]]; //this is as kind of nested array
+    let flat2 = naturalNumbers.flat(2); //this means that the nested array will be flattened to the second level
+    console.log(flat2); //prints the nested array as a single array
+    </script>
+</body>
+-
+</html>

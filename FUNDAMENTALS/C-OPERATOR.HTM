@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPARISON OPERATORS</title>
+</head>
+
+    <body>
+
+            
+
+
+    </body>
+
+    <script>
+                    //EQUAL OPERATOR//
+          let a = 5;
+          let b = 5;
+          console.log(a == a);
+  
+         let c =5;
+         let d = "5";
+         console.log( c == d); //checks if two values are equal
+         //the output of this is 
+
+
+         let m = "RENNEL";
+         let n = "RENNEL";
+         console.log(m ==n);
+
+//==========================================================================================//
+
+         let e = 7;
+         let f = 8;
+         console.log(e === f);     //STRICT EQUAL//      /false because not same value although same data type
+
+         let g = 9;
+         let h = 9;
+         console.log(g === h); //output : true
+
+         let i = 10;
+         let j = "10";
+         console.log( i === j);     //false because not same data type
+
+         let nameOne = "RENZY";
+         let nameTwo = "RENZY";
+         console.log(nameOne === nameTwo);   //true, cause same value same data type
+ 
+        let namee = "RENNEL";
+        let nameee = "Rennel";
+        console.log(namee === nameee);   //false not same value
+
+         let k = 15;
+         let l = "15";
+         l = parseInt(l);
+         console.log( k ===l);  //true because l is converted to number
+
+  
+//========================================================================================//
+
+        let o = 7;
+        let p = 6;
+        console.log(o != p);   //output true because theyre real that not equal//
+
+        let q = "Hello World";
+        let r = "Hello World";
+        console.log(q != r);     //false because they are should be considered as equal;
+    
+       let s = 8;
+       let t = "8";
+       console.log(s != t);   //false because they are equal
+
+       let u = 7;
+       let v ="7"; 
+       console.log(u !== v);   //true because not same datatype
+
+       let w = 8;
+       let x = 8;
+       console.log(w !== x); //false because they are same data type and same value
+
+//===============================================================================================//
+       
+      let y = 5;
+      let z = 6;
+      console.log(y > z); //false
+      console.log(y < z);  //true
+      console.log(y >= z);  //false
+      console.log(y <= z);  //true 
+
+
+        let num1 = 5;
+        let num2 = "10";
+        let text = "Result: ";
+
+        num2 = Number(num2); // "10"  to 10
+        let total = num1 + num2; //  5 + 10 =15
+        let message = text + total;   
+        console.log(message);   //Result :15 
+
+
+
+        let value1 = "30";
+        let value2 = 25;
+        value1 = Number(value1);  //30
+        let isGreater = value1 > value2;  //true
+        console.log(isGreater); //true
+
+
+        let base = 100;
+        let percentage = "20";
+        percentage = Number(percentage); // 20 
+        base += base * (percentage / 100);  //120
+        let resultMessage = "Total: " + base; 
+        console.log(resultMessage); // Output: 120
+
+
+
+        let numA = 12;
+        let numB = "5";
+        let textInfo = "Sum: ";
+        numB = Number(numB); // convert to int 5
+        numA += numB; // 12 + 5 = 17
+        let resultMessagee = textInfo + numA;  //sum: 17 
+        let lengthInfo = textInfo.length;    //5 
+        let lengthResult = resultMessagee.length; //17
+        console.log(resultMessagee);  //sum 17 
+        console.log(lengthInfo < lengthResult); //true
+
+
+
+        let basePoints = 15;
+        let extraPoints = "10";
+        let outputText = "Final Score: ";
+        extraPoints = Number(extraPoints);// 10
+        basePoints += extraPoints; // 15 + 10 = 25 
+        let finalMessage = outputText + basePoints;  //"Final Score: 25
+        let outputTextLength = outputText.length; //13 
+        let finalMessageLength = finalMessage.length; //16
+        console.log(finalMessage);   //"Final Score: 25
+        console.log("Is outputText length less than finalMessage length? " + (outputTextLength < finalMessageLength)); //true
+
+
+
+        let initialServerLoad = 20;
+        let queryTimeout = "7";
+        let responseData;
+        queryTimeout = Number(queryTimeout);  //convert to integer 7
+        initialServerLoad -= queryTimeout;  // 20 -7  = 13
+        responseData = initialServerLoad.toString(); //"13" string
+        let statusMessage = "Final Result: " + responseData; // Final Result:  13 string
+        let isLengthThree = responseData.length === 3; //false
+        console.log(statusMessage);// Final Result:  13 string
+        console.log("Is the final result length exactly 3? " + isLengthThree); //false
+
+
+
+
+        let java = "Hello";
+        let python = "World!";
+        let combinedLength;
+        let combinedString = java + " " + python;
+        combinedLength = combinedString.length;
+        let fixedLength = 12;
+        let newLength = combinedLength + 2; // 14
+        let isLengthMatch = newLength === fixedLength;  //false
+        console.log("Combined String: " + combinedString); //Hello World
+        console.log("Is the length after incrementing 2 equal to 12? " + isLengthMatch); //false
+
+
+
+        let cpuSpeed = 3;
+        let ramSize = "16";
+        let multiplier = 2;
+        let resultMessag;
+        ramSize = Number(ramSize); //16 NUMBER
+        let totalSpeed = cpuSpeed * multiplier;  // 3 * 2 = 6 
+        let totalMemory = ramSize + 4;  // 16 + 4 = 20 
+        resultMessag = "Total Speed: " + totalSpeed + " GHz, Total Memory: " + totalMemory + " GB"; // 6  4 
+        let resultMessageLength = resultMessag.length;
+        cpuSpeed++; //4
+        ramSize--;  // 15
+        let isSpeedHigh = totalSpeed > 5; //true
+        let isMemorySufficient = totalMemory >= 20; //true
+        console.log(resultMessage);
+        console.log("Length of Result Message: " + resultMessageLength);
+        console.log("CPU Speed after increment: " + cpuSpeed);
+        console.log("RAM Size after decrement: " + ramSize);
+        console.log("Is total speed high? " + isSpeedHigh);
+        console.log("Is total memory sufficient? " + isMemorySufficient);
+
+
+     //========================================================================================//   
+        let downloadSpeed = 50;
+        let uploadSpeed = "20";
+        let speedMultiplier = 2;
+        uploadSpeed = Number(uploadSpeed);  //20
+        let effectiveDownloadSpeed = downloadSpeed * speedMultiplier;  // 50 * 2  = 100
+        let effectiveUploadSpeed = uploadSpeed / 2;  // 20 / 2 = 10 
+        let bandwidthMessage = "Effective Download Speed: " + effectiveDownloadSpeed + " Mbps, Effective Upload Speed: " + effectiveUploadSpeed + " Mbps";
+           //  Effective Download Speed:  100  Mbps, Effective Upload Speed: " 10  Mbps";
+        let bandwidthMessageLength = bandwidthMessage.length; //counting the length
+        downloadSpeed++; // 51
+        uploadSpeed--;  //19
+        let isEffectiveSpeedHigh = effectiveDownloadSpeed > 100; //false
+        let isUploadSpeedLow = effectiveUploadSpeed < 10;  //false
+        console.log(bandwidthMessage);   //  Effective Download Speed:  100  Mbps, Effective Upload Speed: " 10  Mbps";
+        console.log("Length of Bandwidth Message: " + bandwidthMessageLength); //67
+        console.log("Download Speed after increment: " + downloadSpeed);  //51
+        console.log("Upload Speed after decrement: " + uploadSpeed);     //19
+        console.log("Is effective download speed high? " + isEffectiveSpeedHigh); //false
+        console.log("Is effective upload speed low? " + isUploadSpeedLow);  //false
+//=================================================================================================//
+        
+        let ramSizee = 16; // 
+        let hardDriveSize = "512"; // 
+        hardDriveSize = Number(hardDriveSize); //512
+        let isRamLarger = ramSizee > hardDriveSize; //false
+        let isHardDriveSmaller = hardDriveSize < 1000;  //true
+        console.log("Is RAM larger than Hard Drive? " + isRamLarger); //false
+        console.log("Is Hard Drive smaller than 1000GB? " + isHardDriveSmaller); //true
+
+
+        let processorSpeed1 = 3.4; // in GHz
+        let processorSpeed2 = "2.8"; // in GHz
+        processorSpeed2 = parseFloat(processorSpeed2); //2.8 float
+        let isFirstProcessorFaster = processorSpeed1 >= processorSpeed2;  //true
+        let isSecondProcessorSlower = processorSpeed2 < 3; //true
+        console.log("Is the first processor faster or equal to the second processor? " + isFirstProcessorFaster); //true
+        console.log("Is the second processor slower than 3 GHz? " + isSecondProcessorSlower);  //true
+
+
+        let inputAge = "25"; // user input as a string
+        let legalAge = 18; // legal age in years
+        inputAge = Number(inputAge);  //25
+        let isOfLegalAge = inputAge >= legalAge; //true
+        let isTooYoung = inputAge < 21;  //true 
+        console.log("Is the user of legal age? " + isOfLegalAge); //true
+        console.log("Is the user too young to drink alcohol? " + isTooYoung); //true
+
+
+        let screenRefreshRate = 144; // in Hz  
+        let targetRefreshRate = "120"; // in Hz
+        targetRefreshRate = Number(targetRefreshRate); //120 to number
+        let isScreenRefreshRateHigher = screenRefreshRate > targetRefreshRate;  //false
+        let isRefreshRateSufficient = screenRefreshRate >= 144; //true
+        console.log("Is screen refresh rate higher than target? " + isScreenRefreshRateHigher);  //false
+        console.log("Is screen refresh rate sufficient (>= 144 Hz)? " + isRefreshRateSufficient);   //true
+
+
+        let batteryHealth = 85; // percentage
+        let threshold = "90"; // percentage
+        threshold = Number(threshold); //90
+        let isBatteryHealthBelowThreshold = batteryHealth < threshold; //true
+        let isBatteryHealthGood = batteryHealth >= 80;    //true     
+        console.log("Is battery health below the threshold? " + isBatteryHealthBelowThreshold); //true
+        console.log("Is battery health good (>= 80%)? " + isBatteryHealthGood); //true
+
+
+        let SSDCapacity = 512; // in GB
+        let HDDCapacity = "1000"; // in GB
+        HDDCapacity = Number(HDDCapacity); //1000 to number
+        let isSSDSufficient = SSDCapacity >= 256; //true
+        let isHDDExceeds = HDDCapacity > 750; //true
+        console.log("Is SSD capacity sufficient (>= 256 GB)? " + isSSDSufficient); //true
+        console.log("Does HDD capacity exceed 750 GB? " + isHDDExceeds); //true
+
+    </script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+ 
+
+       html{
+            margin: 0%;
+            padding:0;
+             box-sizing: border-box;
+       }
+
+        body{
+          display: flex;
+          border: solid;
+          height: 100vh;
+           flex-wrap: wrap;
+           justify-content: space-evenly;
+           align-items: center;
+        }
+
+
+        .btn{
+            width: 200px;
+            height: 100px;
+            border-radius: 10px;
+            border: none;
+          }
+
+
+    </style>
+</head>
+<body>
+     
+      
+        <button id="btn-1" class="btn" onclick="changeColor('green')" onmouseover="changeColor('red')" onmouseout="changeColor('white')">BUTTON1</button>
+        <button id="btn-2" class="btn" onclick="changeColor('red')" onmouseover="changeColor('violet')" onmouseout="changeColor('white')">BUTTON2</button>
+        <button id="btn-3" class="btn" onclick="changeColor('brown')" onmouseover="changeColor('yellow')" onmouseout="changeColor('white')">BUTTON3</button>
+
+     <script>
+           const body = document.getElementsByTagName("body")[0];
+        
+
+           function changeColor(name){
+                body.style.backgroundColor = name;
+           }
+
+          
+
+
+
+     </script>
+</body>
+
+
+</html>

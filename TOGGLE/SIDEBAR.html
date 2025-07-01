@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            display: flex;
+        }
+
+        #sidebar {
+            background-color: green;
+            width: 120px;
+            height: 400px;
+            transform: translateX(-100%); /* Hide sidebar initially */
+            transition: ease .2s;
+    
+        }
+
+        #sidebar.open {
+           transform: translateX(0px);
+           transition: ease .2s;
+        }
+
+        #side-btn {
+            width: 70px;
+            height: 70px;
+            margin: 50px;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <h2>SIDEBAR</h2>
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>FAQ</li>
+        </ul>
+    </div>
+
+    <button id="side-btn">TOGGLE SIDEBAR</button>
+
+    <script>
+        document.getElementById("side-btn").addEventListener("click", function() {
+            const sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("open"); 
+        });
+
+
+        
+    </script>
+</body>
+</html>

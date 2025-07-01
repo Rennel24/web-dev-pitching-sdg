@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World!</title>
+  <style>
+    /* Internal CSS */
+    #container {
+      border: solid 1px;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+      transition: ease 0.10s;
+    }
+
+   #container-2{
+    border: solid 1px;
+      display: flex;
+      justify-content: center;
+      height: 100vh;
+      align-items: center;
+      background-repeat: no-repeat;
+      background: fixed;
+      background-size: cover;
+      transition: ease 0.5s;
+   }
+
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <button type="button" class="btn btn-primary" onclick="changeColors()">COLORS</button>
+  </div>
+
+   <div id="container-2">
+    <button type="button" class="btn btn-primary" onclick="changeImages()">IMAGES</button>
+   </div>
+
+
+  <script>
+    // Declare index outside the function
+    var index = 0;
+
+    function changeColors() {
+      var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+      
+      // Set background color of container
+      document.getElementById("container").style.background = colors[index++];
+      
+
+
+  if(index > colors.length - 1)
+     index = 0;
+    
+    }
+
+
+    var indexx = 0;
+    function changeImages(){
+        var images =
+        ['ds1.png',
+          'ds2.png',
+          'ds3.png',
+          'ds4.png' ,
+          'ds5.png' ,
+           'ds6.png' 
+        ];
+
+
+        document.getElementById("container-2").style.backgroundImage=`url(${images[indexx++]})`;
+
+
+        if (indexx > images.length - 1) 
+        indexx = 0;
+    }
+    
+     
+       
+
+
+
+  </script>
+</body>
+</html>

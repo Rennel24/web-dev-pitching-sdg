@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <body>
+        
+
+
+        
+    </body>
+
+    <script>   
+
+//===============================NOT A SHORT HAND OPERATORS=============================//
+
+         let c = 6;
+         let d = 7;
+         let e = 8;
+         let f = 9;
+         let g = 10;
+
+         c = c -5;   /* 6 -  5  */
+         d = d * 5;  /* 7 *  5  */
+         e = e / 2;  /* 8 /  2  */
+         f = f ** 5; /* 9 **  5  */
+         g = g % 6;  /* 10 % 6  */
+
+         console.log(c, d, e , f, g);  /* 1 35 4 59049 4 */
+
+//===============================NOT A SHORT HAND OPERATORS=============================//
+
+
+//===========================S H O R T  H A N D  O P E R A T O R S====================//
+         let cc = 6;
+         let dd = 7;
+         let ee = 8;
+         let ff = 9;
+         let gg = 10;
+         let hh = 10;
+
+         cc += 5;
+         dd -= 4;
+         ee *= 8;
+         ff /= 9;
+         gg **= 2;
+         hh %= 3;
+
+         console.log(cc);
+         console.log(dd);
+         console.log(ee);
+         console.log(ff);
+         console.log(gg);
+         console.log(hh);
+                                /*OR*/
+         console.log(cc + " " + dd + " " + ee + " " + ff + " " + gg + " " + hh);
+
+
+        let a  = 5;
+          a += 5;    // a  +  5 
+         console.log(a);   
+          
+         let b = 0;
+         b += 5;      // = 5
+         console.log(b);
+
+
+         let num = 5;
+        num++;   // 5 + 1 
+        let message = num + " is the current value.";  
+        console.log(message);  // 6 is the current value. // 
+
+
+        let x = "10";
+        let y = Number(x);  //string to number  "10" - 10 
+        y--;  // 10 - 1  = 9 
+        y += y;   // 9 + 9 = 18
+        console.log(y);  // 18 
+
+
+        let ii = 20;
+        let jj = ii;  //20
+        jj *= 2;     //20 * 2  = 40 
+        jj = String(jj);  // 40 - "40"
+        let result = jj + " apples";  // = "40" + " apples"
+        console.log(result);     // 40 apples
+
+
+        let start = 100;
+        start -= 25;  //100 - 25 = 75
+        start++;    // 75 + 1 = 76 
+        let newValue = start /= 3;  // 76 / 3  =  25.33
+        console.log(start);     // = 25.33
+        console.log(newValue);  // = 25.33
+
+
+        let num1 = 10;   
+        let num2 = 5;
+        num1 += 2; // 10 + 2 =12 
+        num2++;  // 5 + 1 = 6 
+        let combined = String(num1) + String(num2);   //"12" + "6"//
+        console.log(combined, typeof combined);   // "126"
+
+//=====================================================================================//
+
+        let numkk = 10;
+        let numll = 5;
+        ++numkk; // 1 +  10 = 11
+        numll--;   // 5 - 1 = 4
+        let str1 = String(numkk); //"11"
+        let str2 = String(numll);  // "4"
+        let resultt = "After increment: " + str1 + ", After decrement: " + str2;
+        console.log(resultt);
+
+     //Ater increment "11" , After decrement "4" 
+
+        let val = "25"; //auto convert to int when multiply
+        val *= 1;   //25 * 1
+        val++;     // 25 + 1 =26
+        let typeOfVal = typeof val; // 26 num
+        console.log("Value: " + val + ", Type: " + typeOfVal); // Value: 26 , Type: number
+
+
+
+        let score = "10";
+        score = Number(score); //convert to number = 10
+        score++;    // 10  + 1 = 11          
+        --score;    // 11 -1 = 10
+        let finalScore = String(score) + " points";  // "10 points" 
+        let scoreType = typeof finalScore;   //String
+        console.log("Final score: " + finalScore + ", Type: " + scoreType);  //Final score: 10 points,  Type:String
+
+
+        let mm = 5;
+        let nn = "3";
+        mm += Number(nn);  // 5 + 3 = 8 
+        mm--;  //8 -1  = 7                             //used the current value of mm 
+        let info = "Current value of mm is: " + mm;   //"Current value of mm is: " 7
+        let typeOfMm = typeof mm;  //number
+        console.log(info + " and its type is " + typeOfMm);  /*Current value of mm is:  7
+                                                                and its type is number*/                                   
+ 
+
+        let oo = 7; 
+        let pp = "2";
+        let qq = true;  //true is equivalent to 1
+        pp = Number(pp); //from  "2" to 2 
+        pp++;  //2 + 1 = 3
+        qq--;  // 1 - 1 = 0                                                     // pp * qq = 0 + oo = 7
+        let outcome = oo + pp * qq;  //multply first then add the result to oo  3 * 0 = 0 | 7 + 0 = 7 | 7 + 0 = 7
+        let finalResult = "The result is: " + String(outcome); //from 7 to "7"
+        let resultType = typeof finalResult; //String
+        console.log(finalResult + " and its type is " + resultType);
+                //7 and its type is String
+
+
+        let rr = 5;
+        let ss = "10";
+        let tt = true;  //equi to one
+        ss = Number(ss);  //from "10" to 10
+        tt = + tt; //true
+        let resultTwo = rr + ss - tt;  // 5 + 10 = 15 - 1 =  14 
+        let messageTwo = "The result is: " + resultTwo;  
+        console.log(messageTwo);  // "The result is: 14 "
+        console.log(typeof resultTwo); // number
+
+       //=================================================================//
+
+
+        let uu = 4;  
+        let vv = "5";
+        uu++; // 4 + 1  = 5 
+        vv = Number(vv); //from "5" to 5  (convert to number)
+        let ww = uu * vv;  // 5 * 5 = 25 
+        ww--; //25- 1 = 24 
+        let output = "WW after operations: " + ww;
+        console.log(output); //WW after operations:  24;
+        console.log(typeof ww); // number
+
+
+//=======================SHORTHAND OPERATORS AND CHECKING=========================//
+        let xx = 10;
+        let yy = 3;
+        xx += yy; // 10  + 3  =13 
+        yy *= 2; // 3 * 2 = 6
+        let resultThree = xx - yy; // 13 - 6 = 7
+        let resultString = "Result is: " + resultThree;
+        console.log(resultString); // Result is: 7;
+        console.log(typeof resultThree); //number
+
+  //=======================SHORTHAND OPERATORS AND CHECKING=========================//
+
+        let varOne = 8;
+        let varTwo = "7";
+        varOne++; // 8  + 1 = 9
+        varTwo = parseInt(varTwo); //convert to Integer = 7
+        let frTwo= varOne * varTwo; //9 * 7 = 63
+        frTwo++; // 63 + 1 = 64 
+        let messTwo = "Final result is: " + frTwo;
+        console.log(messTwo); //Final result is:  64;
+        console.log(typeof frTwo); //number
+
+
+        let varThree = 6;
+        let varFour = "3";
+        let varFive = false;
+        varFour = +varFour;  //convert to number
+        varFive = +varFive; //convert to number
+        let sum = varFour + varFive; // 3 + 0 = 3 
+        let product = sum * varFive; // 3  * 0 = 0 
+        let resultMessage = "The product is: " + product; // 0 
+        console.log(resultMessage); // The product is:  = 0
+        console.log(typeof product); // number
+
+//====================Type Conversion and Arithmetic==============================//
+
+        let varSix = 5;  
+        let string = "10";
+        let boolean = true;
+        string = Number(string); // string to num  10 
+        let resulttt = varSix + string; // 5 + 10  = 15 
+        let productt = varSix * string;  // 5 * 10 = 50 
+        let boolNum = +boolean; // convert to 1 
+        let rFour = resulttt + productt - boolNum;  // 15 + 50 = 65 - 1 = 64 
+        let messFour = "The result is: " + rFour; // 64 
+        console.log(messFour); // = 64 
+        console.log(typeof resulttt);  //  number
+        
+
+
+        let varSeven = 8;  
+        let strTwo = "12";
+        let boolTwo = true;
+        strTwo= parseInt(strTwo); // from "12" to 12
+        varSeven++; //8 + 1 = 9
+        boolTwo = +boolTwo; // convert to number
+        let totalTwo = varSeven + strTwo + boolTwo; // 9 + 12 + 1  = 22
+        let rmTwo= "Sum: " + totalTwo; 
+        console.log(rmTwo); //Sum: 22
+        console.log(typeof totalTwo);  //number
+
+
+
+        let varEight = 12;
+        let strThree = "24";
+        let boolThree = false;
+        strThree = parseInt(strThree); // Converts the string "24" to the integer 24
+        boolThree = +boolThree;  // Converts the boolean 'false' to the number 0
+        let diff = varEight - strThree; // Subtracts 24 from 12, resulting in -12 
+        let summ = varEight + boolThree; // 12 + 0 = 12
+        let resultFour = "Difference: " + diff + ", Sum: " + summ; // Concatenates the string with the values of diff and sum
+        console.log(resultFour);  // Output: Difference: -12, Sum: 12
+        console.log(typeof resultFour); // Output: string
+
+
+        let varNine = 5;
+        let strFour = "10";
+        let boolFour = true;
+        let result1 = varNine + Number(strFour); // 5 + 10 = 15 
+        let result2 = String(result1) + " is the result";  // "15" is the result
+        console.log(result1);  //15 
+        console.log(result2);   //15
+        console.log(typeof result2); // string
+
+//============================================================================================//
+        let value = "10";   
+        let incrementValue = +value;  //convert to number  the ten
+        incrementValue++; // This is a post decrement still 10 
+        let decrementValue = incrementValue-- - 1;  // 11 - 1  = 10 
+        console.log(incrementValue);  //10  
+        console.log(decrementValue);  //10
+        console.log(typeof incrementValue); //number
+
+
+//===============================================================================================//
+
+        let alpha = 7;
+        let beta = "3.5";
+        let gamma = false;
+        let delta = parseFloat(beta); //convert to decimal 
+        let epsilon = alpha + delta; // 7 + 3.5 = 10.5
+        epsilon *= gamma + 2; // 10.5 * 0 + 2 = 21 
+        console.log(epsilon);  // 21
+        console.log(typeof epsilon);  //number
+
+  //==========================================================================================//      
+
+        let apple = 10;
+        let banana = "20";
+        let cherry = 5;
+        banana = Number(banana); //convert the 20(String) to number
+        apple += banana++; // 10 + 20 = 30 then banana increments to 21 
+        cherry *= --banana; // 5 * pre increment the banana to 20   5 * 20 = 100
+        console.log(apple); // 30
+        console.log(banana); //20
+        console.log(cherry); //100
+        console.log(typeof cherry); //number
+
+//====================================================================================//
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+  
+
+    </script>
+
+
+</html>

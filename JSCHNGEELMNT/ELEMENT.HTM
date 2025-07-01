@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+ 
+       #clickme{
+            background-color: aqua;
+       }
+    </style>
+
+</head>
+
+<body>
+      <div>
+          <h1 id="name">RENNEL IS FOR    </h1>
+          <h1 id="pet">CAT</h1>
+      </div>
+           <button onclick="changeElement()">CLICK HERE</button>   
+           <button onclick="changePet()">CLICK PET</button>
+
+           <div id="clickme" onclick="prompting()">1ST QUESTION
+             
+           </div>
+        <script> 
+               
+               let name = document.getElementById("name");
+               function changeElement(){
+               name.innerHTML = "Mosh";
+               }
+
+                               //USING TEXTCONTENT//
+               let newPet = "Dog";
+               let pet = document.getElementById("pet");
+               function changePet(){
+                
+                if(pet.textContent === 'Dog'){
+                     pet.textContent = 'Cat';
+                }else{
+                     pet.textContent = 'Dog';
+                }
+               }
+
+
+
+
+        </script>
+</body>
+
+
+</html>

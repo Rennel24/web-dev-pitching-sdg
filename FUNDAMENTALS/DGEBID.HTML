@@ -1,0 +1,98 @@
+   <!--DOCUMENT.GETELEMENTNYID-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div id="dgebid">
+         <h1>HELLO WORLD</h1>
+         <p id="inner">CHANGE TO EVEN</p>
+         <p id="change">CHANGE TO ODD</p>
+     </div>
+
+        <p id="num">5</p>
+
+      <!---------------- --------------------------------------------------------------->
+
+        <div class="name">GET ELEMENT BY CLASSNAME</div>
+
+
+ <!---------------- --------------------------------------------------------------->
+        <form>
+            <input type="text" name="text" placeholder="text">
+            <input type="email" name="text" placeholder="email">
+
+        </form>
+
+  <!---------------- --------------------------------------------------------------->
+
+
+</body>
+
+  <script>
+
+    window.alert("Hello World");
+
+    let div = document.getElementById("dgebid");
+    console.log(div);
+    console.log(div.innerHTML);
+
+    let dgebid = document.getElementById("inner").innerHTML = "CHANGE TO ODD";
+    document.getElementById("change"); 
+
+
+    let numOne = 0;
+    let numTwo = 0;
+    numOne = 5;
+    numTwo = 5;
+    sum = numOne + numTwo;
+
+    let result = document.getElementById("num").innerHTML += sum;
+    console.log(result);
+
+    let resultTwo = document.getElementById("num").innerHTML + sum;
+    console.log(resultTwo);
+
+    console.log(document.getElementById("num").innerHTML += sum);
+
+    let outcome = document.getElementById("num" + sum);  // result to null
+    console.log(outcome);
+
+
+
+    //==========================DOCUMENT.GETELEMENTBYCLASS=================================//
+
+
+    let element  ;  //no value
+    element = document.getElementsByClassName("name")[0]; //select the first element in HTML
+    element.innerHTML = "BYCLASSNAME";  /*change the value nung my classname name na name 
+                                        from GET ELEMEMT BY CLASSSNAME to BY CLASSNAME */
+
+   //==================================================================================//
+       document.getElementsByName("text").innerHTML = window.alert("FORM");
+       let change = document.getElementsByName("text")[1];
+       change.placeholder= "EMAIL";
+ // ==================================================================================//
+
+
+
+   
+
+    
+     
+    
+ 
+
+
+
+
+
+
+
+       
+  </script>
+</html>
